@@ -40,8 +40,10 @@ def get_vector_store(text_chunks):
 def get_conversational_chain():
 
     prompt_template = """
-    Answer the question as detailed as possible from the provided context, make sure to provide all the details, if the answer is not in
-    provided context just say, "answer is not available in the context", don't provide the wrong answer\n\n
+    From the context provided in the pdf, answer the question in as much detail as possible. 
+    Make sure to mention all the relevant details and give a generalised answer by understanding the real meaning of the 
+    question in the context of the provided pdf.
+    If the answer is not in provided context just say, "answer is not available in the context", don't provide the wrong answer\n\n
     Context:\n {context}?\n
     Question: \n{question}\n
 
