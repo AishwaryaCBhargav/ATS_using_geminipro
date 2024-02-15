@@ -42,7 +42,8 @@ def get_conversational_chain():
     prompt_template = """
     From the context provided in the pdf, answer the question in as much detail as possible. 
     Make sure to mention all the relevant details and give a generalised answer by understanding the real meaning of the 
-    question in the context of the provided pdf.
+    question in the context of the provided pdf. From whatever is provided in the paper about the question asked, 
+    understand the context and reply in a summarised manner.
     If the answer is not in provided context just say, "answer is not available in the context", don't provide the wrong answer\n\n
     Context:\n {context}?\n
     Question: \n{question}\n
