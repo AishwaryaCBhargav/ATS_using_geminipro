@@ -41,8 +41,8 @@ def get_conversational_chain():
 
     prompt_template = """
     From the context provided in the pdf, answer the question in as much detail as possible. 
-    Assimilate all the information provided in the pdf with regard to the question and then 
-    summarise that information to provide a complete answer that is easy to understand by the user.
+    Assimilate all the information provided in the pdf with regard to the question and provide 
+    that information in a paragraph.
     Always provide complete sentences.
     If the answer is not in provided context just say, "answer is not available in the context", don't provide the wrong answer\n\n
     Context:\n {context}?\n
