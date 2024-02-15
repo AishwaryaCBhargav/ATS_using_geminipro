@@ -43,6 +43,7 @@ def get_conversational_chain():
     From the context provided in the pdf, answer the question in as much detail as possible. 
     Assimilate all the information provided in the pdf with regard to the question and then 
     summarise those details to provide a clear answer that is easy to understand by the user.
+    Always provide complete sentences, upto the nearest period available.
     If the answer is not in provided context just say, "answer is not available in the context", don't provide the wrong answer\n\n
     Context:\n {context}?\n
     Question: \n{question}\n
