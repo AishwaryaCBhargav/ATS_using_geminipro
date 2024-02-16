@@ -40,11 +40,11 @@ def get_vector_store(text_chunks):
 def get_conversational_chain():
 
     prompt_template = """
-    From the context provided in the pdf, answer the question in as much detail as possible. 
-    Assimilate all the information provided in the pdf with regard to the question and provide 
-    that information in a paragraph.
-    Always provide complete sentences.
-    If the answer is not in provided context just say, "answer is not available in the context", don't provide the wrong answer\n\n
+    Hi, I will upload one or more pdf files and I need your help in understanding its content.
+    Please assist me in extracting the information from the PDF files and provide insights and 
+    analysis based on the content of the PDF files.
+    Always provide complete sentences and in the context of the uploaded PDF files.
+    If the answer is not in the provided context just say, "answer is not available in the context", don't provide the wrong answer\n\n
     Context:\n {context}?\n
     Question: \n{question}\n
 
