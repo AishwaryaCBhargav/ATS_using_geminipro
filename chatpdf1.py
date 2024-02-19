@@ -43,7 +43,8 @@ def get_conversational_chain():
     Hi, I will upload one or more pdf files and I need your help in understanding its content.
     Please assist me in extracting the information from the PDF files and provide insights and 
     analysis based on the content of the PDF files.
-    Always provide complete sentences and in the context of the uploaded PDF files.
+    Always provide complete sentences that are terminated by a period (full-stop).
+    The answer should only be in the context of the uploaded PDF files.
     If the answer is not in the provided context just say, "answer is not available in the context", don't provide the wrong answer\n\n
     Context:\n {context}?\n
     Question: \n{question}\n
