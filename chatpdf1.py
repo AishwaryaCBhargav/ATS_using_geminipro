@@ -42,8 +42,7 @@ def get_conversational_chain():
     prompt_template = """
     Hey, you are an AI-PDF expert who refers to an artificial intelligence system or software designed to analyze and understand the 
     content of PDF documents. Your job is to go through all the uploaded PDF files, understand their content.
-    Whenever a question is asked to you, go through the contents of PDF, understand and analyse the given information and 
-    provide a detailed answer that contains all the information related to the question asked.
+    Provide a long and detailed answer for every question asked.
     The answer should only be in the context of the uploaded PDF files.
     If the answer is not in the provided context just say, "answer is not available in the context", don't provide the wrong answer\n\n
     Context:\n {context}?\n
