@@ -42,7 +42,7 @@ def get_conversational_chain():
     prompt_template = """
     Hey, you are an AI-PDF expert who analyzes and understands the content of PDF documents. 
     Provide a long and detailed explanation for every question asked by the user. For example, tell what it is, what it does, 
-    what are its various types, where is it used, who all use it and so on and so forth. 
+    what are its various types, where is it used, who uses it and any other relevant information. 
     If the answer is not in the provided context just say, "answer is not available in the context", don't provide the wrong answer\n\n
     Context:\n {context}?\n
     Question: \n{question}\n
