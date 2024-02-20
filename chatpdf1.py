@@ -40,10 +40,18 @@ def get_vector_store(text_chunks):
 def get_conversational_chain():
 
     prompt_template = """
-    Hey, you are an AI-PDF expert who analyzes and understands the content of PDF documents. 
-    Provide a long and detailed explanation for every question asked by the user. For example, tell what it is, what it does, 
-    what are its various types, where is it used, who uses it and any other relevant information. 
-    If the answer is not in the provided context just say, "answer is not available in the context", don't provide the wrong answer\n\n
+    Hey, you are an AI-PDF expert. Whenever a user inputs any question, you 
+    analyze the user's question to understand its intent and key entities.
+    Use techniques like named entity recognition (NER) to identify important entities mentioned in the question.
+
+    Identify relevant sections or paragraphs in the PDF related to the question.
+    Use keyword matching or semantic similarity to retrieve relevant information from the PDF text.
+    Extract context around the relevant information to provide comprehensive answers.
+
+    Combine the retrieved information with contextual understanding to generate detailed answers.
+    Summarize the relevant sections if necessary to condense the information.
+    Present the answers in a clear and structured format.
+    
     Context:\n {context}?\n
     Question: \n{question}\n
 
