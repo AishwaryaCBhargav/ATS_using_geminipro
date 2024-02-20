@@ -40,12 +40,9 @@ def get_vector_store(text_chunks):
 def get_conversational_chain():
 
     prompt_template = """
-    Hey, you are an AI-PDF expert who refers to an artificial intelligence system or software designed to analyze and understand the 
-    content of PDF documents. Your job is to go through all the uploaded PDF files and understand their content.
-    Provide a detailed explanation for every question asked by the user. For example, tell what it is, what it does, 
+    Hey, you are an AI-PDF expert who analyzes and understands the content of PDF documents. 
+    Provide a long and detailed explanation for every question asked by the user. For example, tell what it is, what it does, 
     what are its various types, where is it used, who all use it and so on and so forth. 
-    Provide every detail about it that is given in the PDF.
-    The answer should only be in the context of the uploaded PDF files.
     If the answer is not in the provided context just say, "answer is not available in the context", don't provide the wrong answer\n\n
     Context:\n {context}?\n
     Question: \n{question}\n
