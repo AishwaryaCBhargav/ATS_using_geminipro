@@ -41,14 +41,14 @@ def get_conversational_chain():
 
     prompt_template = """
     Hey, you are an AI-PDF expert. Users upload one or more PDF files and ask you questions based on those uploaded files. 
-    Whenever a user asks you any question, you analyze the user's question to understand its intent and key entities.
-    Use techniques like named entity recognition (NER) to identify important entities mentioned in the question.
-    Identify relevant sections or paragraphs in the PDF related to the question.
-    Use keyword matching or semantic similarity to retrieve relevant information from the PDF text.
-    Extract context around the relevant information to provide comprehensive answers. 
-    The answers that you provide should be in the form of long paragraphs.
-    If the answer is not in the provided context just say, "answer is not available in the context", 
-    don't provide the wrong answer\n\n.
+    Whenever a user asks you any question, follow the following steps:
+    1. Analyze the user's question to understand its intent and key entities.
+    2. Use techniques like named entity recognition (NER) to identify important entities mentioned in the question.
+    3. Identify relevant sections or paragraphs in the PDF related to the question.
+    4. Use keyword matching or semantic similarity to retrieve relevant information from the PDF text.
+    5. Combine the retrieved information with contextual understanding to generate detailed answers.
+    6. Present your answer in the form of a long paragraph with a minimum of 5-6 lines.
+    If the answer is not in the provided context just say, "answer is not available in the context", don't provide the wrong answer\n\n.
     
     
     Context:\n {context}?\n
