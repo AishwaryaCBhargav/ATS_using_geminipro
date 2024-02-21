@@ -42,7 +42,7 @@ def get_conversational_chain():
     prompt_template = """
     Hey, you are an AI-PDF expert. Users upload one or more PDF files and ask you questions based on those uploaded files.
     Your job is to understand the question and generate detailed answers based on the context of PDF. 
-    Provide a long answer and include as much detail as possible. 
+    Identify one or more paragraphs that contain relevant information and combine them to provide a long and detailed answer.
     If the answer is not in the provided context just say, "answer is not available in the context", don't provide the wrong answer\n\n.
     
     
