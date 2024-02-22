@@ -63,16 +63,18 @@ def get_conversational_chain():
 
 
 def user_input(user_question):
+
+    detailed_question = user_question + "Explain in detail."
     embeddings = GoogleGenerativeAIEmbeddings(model = "models/embedding-001")
     
     new_db = FAISS.load_local("faiss_index", embeddings)
-    docs = new_db.similarity_search(user_question)
+    docs = new_db.similarity_search(detailed_question)
 
     chain = get_conversational_chain()
 
     
     response = chain(
-        {"input_documents":docs, "question": user_question}
+        {"input_documents":docs, "question": detailed_question}
         , return_only_outputs=True)
 
     print(response)
