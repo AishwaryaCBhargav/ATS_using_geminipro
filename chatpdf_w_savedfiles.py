@@ -29,6 +29,10 @@ def save_uploaded_files(uploaded_files):
             f.write(uploaded_file.getbuffer())
         saved_paths.append(file_path)
     return saved_paths
+
+#####
+def list_saved_files():
+    return os.listdir(PDF_DIR)
  
 def get_pdf_text(pdf_paths):
     text = ""
@@ -112,6 +116,13 @@ def main():
                 text_chunks = get_text_chunks(raw_text)
                 get_vector_store(text_chunks)
                 st.success("Done")
+
+    # List saved files
+    saved_files = list_saved_files()
+    if saved_files:
+        st.header("Saved Files")
+        for file_name in saved_files:
+            st.write(file_name)
  
 if __name__ == "__main__":
     main()
