@@ -117,12 +117,12 @@ def main():
                 get_vector_store(text_chunks)
                 st.success("Done")
 
-    # List saved files
-    saved_files = list_saved_files()
-    if saved_files:
-        st.header("Saved Files")
-        for file_name in saved_files:
-            st.write(file_name)
+        # List saved files
+        saved_files = list_saved_files()
+        if saved_files:
+            st.header("Saved Files")
+            for file_name in saved_files:
+                st.write(file_name)
  
 if __name__ == "__main__":
     main()
