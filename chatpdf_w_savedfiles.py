@@ -109,8 +109,7 @@ def main():
     with st.sidebar:
         st.title("Menu:")
         uploaded_files = st.file_uploader("Upload your PDF Files and Click on the Submit & Process Button", accept_multiple_files=True)
-        if st.button("Submit & Process"; background-color: #4CAF50;
-            color: white):
+        if st.button("Submit & Process"):
             with st.spinner("Processing..."):
                 pdf_paths = save_uploaded_files(uploaded_files)
                 raw_text = get_pdf_text(pdf_paths)
