@@ -35,16 +35,14 @@ st.header("ATS Tracking System")
 # uploaded_file=st.file_uploader("Upload your resume(PDF)...",type=["pdf"])
 
 st.subheader('Upload Job Description PDF')
-job_description_file = st.file_uploader('Upload a PDF file', type='pdf')
+job_description_file = st.file_uploader('Upload JD file', type='pdf')
 
 st.subheader('Upload Resume PDF')
-resume_file = st.file_uploader('Upload a PDF file', type='pdf')
+resume_file = st.file_uploader('Upload Resume file', type='pdf')
 
 
 if job_description_file and resume_file:
     st.write("PDFs Uploaded Successfully")
-
-
 
 
 submit1 = st.button("Tell Me About the Resume")
@@ -67,5 +65,5 @@ if submit1:
         st.subheader("The Repsonse is")
         st.write(response)
     else:
-        st.write("Please uplaod the resume")
+        st.write("Please upload the resume")
 
